@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Classes</h2>
+
+<ul>
+    {% for index, name in classes.items %}
+        <li>{{ index }} - {{ name }}</li>
+    {% endfor %}
+</ul>
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+
+
+{% endblock content %}

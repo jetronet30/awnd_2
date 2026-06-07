@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+{% endblock css %}
+
+{% block content %}
+<div class="camera-page">
+
+    <div class="camera-container">
+        <video
+            id="video"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls>
+            <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4">
+        </video>
+
+        <canvas id="overlay"></canvas>
+    </div>
+
+</div>
+{% endblock content %}
